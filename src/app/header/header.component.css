@@ -1,0 +1,22 @@
+.ft_nav{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: space-between;
+    padding: 3rem;
+    margin: auto;
+}
+
+.ft_nav .menu-nav{
+    display: flex;
+    gap: 1rem;
+}
+
+.item_nav{
+    padding: 1rem;
+}
+
+.option-nav{
+    display: flex;
+    gap: 1rem;
+}

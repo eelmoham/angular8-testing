@@ -1,0 +1,27 @@
+<div class="main flex">
+    <div style="margin: 3rem; display: flex;justify-content: space-between;">
+        <div>List of Products</div>
+        <div class="" style="display: flex; gap: 2px;">
+            <select  (change)="setCategorie($event)" name="filter" id="find" style="z-index: 50;padding: 1rem;">
+                <option value="">All</option>
+                <option style="padding: 1rem;" *ngFor="let ctg of categories">
+                    {{ctg}}
+                </option>
+            </select>
+        </div>
+    </div>
+    <div class="products">
+        <div *ngFor="let product of data" class="row prod-img card-prod" style="width: 18rem; display: flex;">
+            <div class="card-body">
+                <img [src]="product.image" class="prod-img" alt="Product Image">
+                <div class="" style="padding: 1rem; ">
+                    <h5 class="card-title" style="font-size:0.6vw;padding: 0.5rem;">{{product.title}}</h5>
+                    <div>
+                        <strong class="card-text" style="font-size:0.6vw;padding: 0.5rem;">{{product.price}}</strong>
+                        <a [routerLink]="['/product', product.id]">view</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
